@@ -23,7 +23,7 @@ Execute ulang = versi lama otomatis di-unload dulu (setting lu kebawa).
 | `Z` | Lock ke musuh terdekat / unlock |
 | `P` | Auto parry hub Interium on / off |
 
-**Semua fitur on / off bisa dikasih keybind** di tab **Keybind** (reach, emote, No Slowdown, ESP, auto taunt, dll — default kosong). Satu tombol cuma buat satu fungsi, `Backspace` = kosongin. Tombol game (`F` `R` `T` `Q` `V` `B` `E` `Tab` `WASD` `Space` `Shift`) gak bisa dipake biar gak bentrok sama block / heavy / equip — keybind lama yang pake tombol game ditandain merah.
+**Semua fitur on / off bisa dikasih keybind** di tab **Keybind** (reach, emote, No Slowdown, ESP, auto taunt, dll — default kosong). Satu tombol cuma buat satu fungsi, `Backspace` = kosongin. Tombol game juga boleh dipake (mis. auto parry di `F` — pencet F = block + auto parry on / off).
 
 ## Fitur
 
