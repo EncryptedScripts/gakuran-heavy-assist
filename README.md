@@ -23,7 +23,7 @@ Execute ulang = versi lama otomatis di-unload dulu (setting lu kebawa).
 | `Z` | Lock ke musuh terdekat / unlock |
 | `P` | Auto parry hub Interium on / off |
 
-Reach & 4 slot emote belum ada tombol default — set sendiri di tab **Keybind** (atau tab **Emote**). Satu tombol cuma buat satu fungsi, `Backspace` = kosongin.
+**Semua fitur on / off bisa dikasih keybind** di tab **Keybind** (reach, emote, No Slowdown, ESP, auto taunt, dll — default kosong). Satu tombol cuma buat satu fungsi, `Backspace` = kosongin. Tombol game (`F` `R` `T` `Q` `V` `B` `E` `Tab` `WASD` `Space` `Shift`) gak bisa dipake biar gak bentrok sama block / heavy / equip — keybind lama yang pake tombol game ditandain merah.
 
 ## Fitur
 
@@ -33,10 +33,13 @@ Reach & 4 slot emote belum ada tombol default — set sendiri di tab **Keybind**
 - **M1 Guard** — auto swing lu ditahan pas counter / parry mau jalan (biar R / block gak ketolak). **Prioritas Counter**, **Fix R nyangkut**, pause auto parry hub lain pas counter siap.
 
 **Combat**
-- **Auto Parry** — preset Full Parry / Pro / Like Human / Santai / Custom, rotation cone, timing, tahan block, parry heavy.
-  - Koreksi timing otomatis (belajar dari hasil parry lu sendiri), cadangan detik terakhir (block pas hitbox udah nyentuh), auto equip (T) kalau belum combat stance.
-  - Anti reach: pemain yang ketauan pake reach tetep di-parry walau posisinya jauh.
-  - Lawan nge-spam: block ditahan kalau gak sempet perfect lagi (kecuali stamina mepet).
+- **Auto Parry** — preset Full Parry / Pro / Like Human / Santai / Custom, rotation cone, timing, tahan block, parry heavy. Dites lawan pemain asli.
+  - Timing ikut cara game ngitung window perfect (waktu server pas lu nekan) + ping lu.
+  - Musuh nempel / lagi duel sama lu tetep ke-parry walau di layar lu dia keliatan belum ngadep.
+  - **Hadap penyerang** — block di Gakuran cuma nahan dari depan: kalau Face Target mati & musuh mukul dari samping / belakang, badan (bukan kamera) diputer sebentar ke dia. Bisa dimatiin.
+  - Combo: abis perfect block langsung dilepas biar pukulan berikutnya bisa perfect lagi; kalau gak sempet, block ditahan (kecuali stamina mepet).
+  - Block gak pernah nyangkut (dilepas otomatis kalau gak ada serangan). Auto parry hub Interium di-pause selama auto parry ini nyala.
+  - Auto equip (T) kalau belum combat stance. Anti reach: pemain yang ketauan pake reach tetep di-parry walau posisinya jauh.
 - **Face Target** — badan (+ kamera) ngadep penyerang, ada smoothing.
 - **No Slowdown / No Stun Slow / No Delay** — gak dipelanin pas nyerang / kena stun, swing M1 nyambung tanpa jeda.
 - **Reach** — pukulan nyampe dari jauh, **di layar lu badan tetep diem**.
@@ -73,13 +76,15 @@ Reach & 4 slot emote belum ada tombol default — set sendiri di tab **Keybind**
 - Statistik pasif: auto parry / auto counter (persentase & konsistensi timing), reach, stamina tanpa abis.
 
 **Config**
-- Save pakai nama, load, delete, **autoload** config pilihan tiap script dijalanin.
-- Setting sesi terakhir otomatis kesimpen tiap 5 detik — tetep ada walau rejoin / game crash.
+- Save pakai nama, load, delete, **autoload** config pilihan tiap script dijalanin. Semua setting & keybind ikut ke-save.
+- Load config = **persis isi file**: setting yang gak ada di config itu balik ke default (gak kebawa dari config / sesi sebelumnya).
+- Rejoin: ada autoload = persis config itu. Gak ada autoload (atau toggle **lanjutin sesi terakhir** nyala) = setting sesi terakhir, yang otomatis kesimpen tiap 5 detik.
 - Disimpen di folder executor: `EncryptedHeavyAssist/`.
 
 ## Catatan
 
 - Damage, block, stamina & safe zone tetep diputusin server — script gak bisa bikin kebal.
+- Auto parry gak bisa 100%: cooldown block game 0.5 detik bikin perfect beruntun di combo cepet mustahil, pukulan pas lu ke-stun / lagi ngayun gak bisa di-block.
 - Reach: di layar pemain lain lu keliatan pindah ke samping target sebentar pas mukul.
 - Animasi / emote marketplace cuma keliatan orang lain kalau asset-nya boleh dipake publik (animation pack & emote yang dijual di marketplace).
 - Pakai dengan risiko sendiri.
